@@ -52,3 +52,4 @@ tags
 
 .env
 config/locales/.DS_Store
+/public/assets

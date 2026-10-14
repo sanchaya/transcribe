@@ -291,14 +291,10 @@ class IaWork < ApplicationRecord
     scandata = formats.select{|e| e.inner_text=='Scandata'}.first.parent['name']
     djvu = formats.select{|e| e.inner_text=='Djvu XML'}.first.parent['name']
     zips = formats.select{|e| e.inner_text=='Single Page Processed JP2 ZIP'}
+
     if zips.size < 1
       zips = formats.select{|e| e.inner_text=='Single Page Processed JP2 Tar'}
     end
-    if zips.size < 1
-      zips = formats.select{|e| e.inner_text=="Single Page Processed JPEG Tar"}
-    end
-
-
 
     zip = zips.first.parent['name']
 

@@ -83,17 +83,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-Rails.application.routes.default_url_options[:host] = 'fromthepage.com'
-  config.action_mailer.default_url_options = { host: 'fromthepage.com' }
-  config.action_mailer.default_options = { from: 'support@fromthepage.com' }
+  Rails.application.routes.default_url_options[:host] = 'transcribe.sanchaya.net'
+  config.action_mailer.default_url_options = { host: 'transcribe.sanchaya.net' }
+  config.action_mailer.default_options = { from: 'support@sanchaya.org' }
   config.action_mailer.smtp_settings = {
     :address   => "smtp.mandrillapp.com",
     :port      => 587, # ports 587 and 2525 are also supported with STARTTLS
     :enable_starttls_auto => true, # detects and uses STARTTLS
     :user_name => "FromThePage",
-    :password  => "14wY3Bos9GRp1WxlCPPFBg", # SMTP password is any valid API key
+    :password  => ENV['SMTP_PASSWORD'], # SMTP password is any valid API key
     :authentication => 'login', # Mandrill supports 'plain' or 'login'
-    :domain => 'fromthepage.com', # your domain to identify your server when connecting
+    :domain => 'transcribe.sanchaya.net', # your domain to identify your server when connecting
   }
 
   Ahoy.geocode = false

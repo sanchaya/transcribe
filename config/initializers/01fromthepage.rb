@@ -1,7 +1,7 @@
-ADMIN_EMAILS = 'saracarl@gmail.com, benwbrum@gmail.com'
-SENDING_EMAIL_ADDRESS = 'support@fromthepage.com'
+ADMIN_EMAILS = 'admin@sanchaya.org'
+SENDING_EMAIL_ADDRESS = 'support@sanchaya.org'
 SMTP_ENABLED = false
-USE_PNG_LOGO = false
+USE_PNG_LOGO = true
 GUEST_DEED_COUNT = 3
 GUEST_TRANSCRIPTION_ENABLED = false
 FACEBOOK_PIXEL_ID = ''
