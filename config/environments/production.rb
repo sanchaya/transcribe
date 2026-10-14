@@ -40,7 +40,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
+  config.force_ssl = ENV['FORCE_SSL'] == 'true'
 
   # BWB 2018-08-16 changed from :info to :warn
   # BWB 2018-11-17 changed from :warn to :info
